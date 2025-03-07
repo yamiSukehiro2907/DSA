@@ -1,9 +1,10 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
     public int solve(int[] A, int B) {
         int preSum = 0, count = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
         for (int i = 0; i < A.length; i++) {
             preSum += A[i];
