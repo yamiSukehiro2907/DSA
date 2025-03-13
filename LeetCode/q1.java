@@ -22,3 +22,4 @@ public class q1 {
         return 0;
     }
 }
+
