@@ -15,12 +15,10 @@ class SongNode {
 class Spotify {
     private SongNode LRU;
     private SongNode MRU;
-    private int capacity;
     private int size;
     private Map<String, SongNode> map;
 
-    Spotify(int capacity) {
-        this.capacity = capacity;
+    Spotify() {
         this.LRU = null;
         this.MRU = null;
         this.size = 0;
@@ -29,41 +27,41 @@ class Spotify {
 
     public void insert(String song) {
         if (size == 0) {
-            SongNode newHead = new SongNode(song);
-            newHead.next = LRU;
+            insertAtMRU(song);
+            LRU = MRU;
+            size++;
             map.put(song, null);
-            LRU = newHead;
-            MRU = newHead;
             return;
         }
         boolean exist = map.containsKey(song);
         if (exist) {
-            if (size < capacity) {
-                if (MRU.data == song)
-                    return;
-                if (LRU.data == song) {
-                    LRU = LRU.next;
-                    insertAtMRU(song);
-                    return;
-                }
+            if (MRU.data.equals(song))
+                return;
+            if (LRU.data.equals(song)) {
+                LRU = LRU.next;
+            } else {
                 SongNode previous = map.get(song);
-                SongNode next = previous.next.next;
-                previous.next = next;
-                insertAtMRU(song);
+                if (previous != null && previous.next != null) {
+                    previous.next = previous.next.next;
+                }
             }
-        }
-        if (size < capacity) {
-            map.put(song, MRU);
             insertAtMRU(song);
-            size++;
             return;
         }
+        insertAtMRU(song);
+        size++;
     }
 
     private void insertAtMRU(String song) {
         SongNode newHead = new SongNode(song);
-        MRU.next = newHead;
-        MRU = MRU.next;
+        if (MRU == null) {
+            MRU = newHead;
+            LRU = newHead;
+        } else {
+            map.put(song, MRU);
+            MRU.next = newHead;
+            MRU = newHead;
+        }
     }
 
     public void print() {
@@ -81,7 +79,7 @@ class Spotify {
 
 public class LRU_singly {
     public static void main(String[] args) {
-        Spotify playlist = new Spotify(4);
+        Spotify playlist = new Spotify();
         playlist.insert("Ae Dil Hain MushKil");
         playlist.insert("Jogi Ji Dheere Dheere");
         playlist.insert("Bulleya");
