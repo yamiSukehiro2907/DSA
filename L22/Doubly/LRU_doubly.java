@@ -1,4 +1,4 @@
-package L21;
+package L22.Doubly;
 
 import java.util.HashMap;
 
@@ -35,9 +35,9 @@ class Spotify {
             return;
         }
         boolean exist = map.containsKey(song);
-        if(exist){
+        if (exist) {
             SongNode previous = map.get(song);
-            
+
         }
     }
 

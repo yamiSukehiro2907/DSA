@@ -1,24 +1,14 @@
-package L21;
+package L22.Singly;
 
 import java.util.*;
 
-class SongNode {
-    String data;
-    SongNode next;
-
-    SongNode(String data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-class Spotify {
+public class Spotify {
     private SongNode LRU;
     private SongNode MRU;
     private int size;
     private Map<String, SongNode> map;
 
-    Spotify() {
+    public Spotify() {
         this.LRU = null;
         this.MRU = null;
         this.size = 0;
@@ -35,11 +25,14 @@ class Spotify {
         }
         boolean exist = map.containsKey(song);
         if (exist) {
-            if (MRU.data.equals(song)) return;
-            if (LRU.data.equals(song))  LRU = LRU.next;
+            if (MRU.data.equals(song))
+                return;
+            if (LRU.data.equals(song))
+                LRU = LRU.next;
             else {
                 SongNode previous = map.get(song);
-                if (previous != null && previous.next != null) previous.next = previous.next.next;
+                if (previous != null && previous.next != null)
+                    previous.next = previous.next.next;
             }
             insertAtMRU(song);
             return;
@@ -70,17 +63,5 @@ class Spotify {
             temp = temp.next;
         }
         System.out.println();
-    }
-}
-
-public class LRU_singly {
-    public static void main(String[] args) {
-        Spotify playlist = new Spotify();
-        playlist.insert("Ae Dil Hain MushKil");
-        playlist.insert("Jogi Ji Dheere Dheere");
-        playlist.insert("Bulleya");
-        playlist.insert("Jai Jai Shiv Shankar");
-        playlist.insert("Jogi Ji Dheere Dheere");
-        playlist.print();
     }
 }
