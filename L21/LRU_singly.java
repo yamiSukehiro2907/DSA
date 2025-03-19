@@ -35,15 +35,11 @@ class Spotify {
         }
         boolean exist = map.containsKey(song);
         if (exist) {
-            if (MRU.data.equals(song))
-                return;
-            if (LRU.data.equals(song)) {
-                LRU = LRU.next;
-            } else {
+            if (MRU.data.equals(song)) return;
+            if (LRU.data.equals(song))  LRU = LRU.next;
+            else {
                 SongNode previous = map.get(song);
-                if (previous != null && previous.next != null) {
-                    previous.next = previous.next.next;
-                }
+                if (previous != null && previous.next != null) previous.next = previous.next.next;
             }
             insertAtMRU(song);
             return;
