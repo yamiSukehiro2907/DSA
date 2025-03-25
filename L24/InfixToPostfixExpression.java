@@ -25,7 +25,7 @@ public class InfixToPostfixExpression {
                 sb.append(" ");
                 i--;
             } else if (isOperator(ch)) {
-                while (!operator.isEmpty() && operator.peek() != '(' && precedence(ch) <= precedence(operator.peek())) {
+                while (!operator.isEmpty() && operator.peek() != '(' && precedence(ch) < precedence(operator.peek())) {
                     sb.append(operator.pop()).append(" ");
                 }
                 operator.push(ch);
@@ -54,8 +54,8 @@ public class InfixToPostfixExpression {
 
     private static void initialize() {
         map.put('-', 1);
-        map.put('+', 1);
-        map.put('*', 2);
-        map.put('/', 2);
+        map.put('+', 2);
+        map.put('*', 3);
+        map.put('/', 4);
     }
 }
