@@ -19,6 +19,7 @@ public class BT1 {
         print(root.right);
     }
 
+    @SuppressWarnings("unused")
     private static boolean isIdentical(TreeNode root1, TreeNode root2) {
         if (root1 == null && root2 == null)
             return true;
@@ -30,6 +31,7 @@ public class BT1 {
         return isIdentical(root1.left, root2.left) && isIdentical(root1.right, root2.right);
     }
 
+    @SuppressWarnings("unused")
     private static boolean isMirror(TreeNode root1, TreeNode root2) {
         if (root1 == null && root2 == null)
             return true;
@@ -40,6 +42,7 @@ public class BT1 {
         return isMirror(root1.right, root2.left) && isMirror(root1.left, root2.right);
     }
 
+    @SuppressWarnings("unused")
     private static TreeNode mirror(TreeNode root) {
         if (root == null)
             return root;
