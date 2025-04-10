@@ -43,5 +43,6 @@ public class Main {
             l += k;
         }
         System.out.println("Total sum: " + l);
+        sc.close();
     }
 }
