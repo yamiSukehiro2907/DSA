@@ -1,19 +1,19 @@
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	// arr := solve(2)
-	// for i := 0; i < len(arr); i++ {
-	// 	fmt.Println(arr[i])
-	// }
-	Map := make(map[int64]int)
-	Map[0] = 1;
-	sum := 0
-	sum += 1
-	sum += 1000000000
-	fmt.Println(sum)
-}
+// func main() {
+// 	// arr := solve(2)
+// 	// for i := 0; i < len(arr); i++ {
+// 	// 	fmt.Println(arr[i])
+// 	// }
+// 	Map := make(map[int64]int)
+// 	Map[0] = 1;
+// 	sum := 0
+// 	sum += 1
+// 	sum += 1000000000
+// 	fmt.Println(sum)
+// }
 
 
 // "0" "1"
