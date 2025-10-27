@@ -1,4 +1,4 @@
-package binary_tree.L28_BinaryTree;
+package common;
 
 public class TreeDiameter {
     public static void main(String[] args) {
