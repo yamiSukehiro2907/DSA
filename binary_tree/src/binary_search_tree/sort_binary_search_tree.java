@@ -1,9 +1,9 @@
 package binary_search_tree;
 
-import common.TreeNode;
-
 import java.util.ArrayList;
 import java.util.Comparator;
+
+import common.TreeNode;
 
 public class sort_binary_search_tree {
     public static void main(String[] args) {

@@ -1,6 +1,9 @@
 package binary_search_tree;
+
 import common.TreeNode;
+
 public class insert_in_binary_search_tree {
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(11);
         root.left = new TreeNode(7);
@@ -15,7 +18,7 @@ public class insert_in_binary_search_tree {
         root = insert(root, 22);
         root = insert(root, 10);
         root = insertUsingRecursion(root, 23);
-        root = delete(root , 22);
+        root = delete(root, 22);
         print(root);
     }
 
@@ -44,8 +47,9 @@ public class insert_in_binary_search_tree {
     }
 
     private static void print(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         print(root.left);
         System.out.print(root.val + " ");
         print(root.right);
@@ -65,15 +69,17 @@ public class insert_in_binary_search_tree {
         return root;
     }
 
-    private static TreeNode delete(TreeNode root , int val){
-        if(root == null) return root;
+    private static TreeNode delete(TreeNode root, int val) {
+        if (root == null) {
+            return root;
+        }
         int rVal = root.val;
-        if(rVal == val){
+        if (rVal == val) {
 
-        }else if(val < rVal){
+        } else if (val < rVal) {
             root.left = delete(root.left, val);
-        }else{
-            root.right = delete(root.right , val);
+        } else {
+            root.right = delete(root.right, val);
         }
         return root;
     }

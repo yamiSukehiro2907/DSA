@@ -1,3 +1,4 @@
+package famous_problems;
 
 import common.TreeNode;
 import java.util.*;
@@ -12,7 +13,8 @@ public class pathSum2 {
         root.right = new TreeNode(15);
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(21);
-        List<List<Integer>> ans = pathSum(root, 25);
+        List<List<Integer>> ans = pathSum(root, 26);
+        for(List<Integer> temp : ans) System.out.println(temp);
     }
 
     public static List<List<Integer>> pathSum(TreeNode root, int targetSum) {
@@ -22,15 +24,11 @@ public class pathSum2 {
     }
 
     private static void solve(List<List<Integer>> ans, TreeNode root, int sum, int targetSum, List<Integer> temp) {
-        if (root == null) {
-            return;
-        }
+        if (root == null) return;
         sum += root.val;
         temp.add(root.val);
         if (root.left == null && root.right == null) {
-            if (sum == targetSum) {
-                ans.add(temp);
-            }
+            if (sum == targetSum) ans.add(temp);
             return;
         }
         solve(ans, root.left, sum, targetSum, temp);

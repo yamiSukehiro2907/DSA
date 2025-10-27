@@ -1,5 +1,5 @@
+package famous_problems;
 import common.TreeNode;
-
 import java.util.*;
 
 public class average_of_level_in_binary_tree {
@@ -8,7 +8,7 @@ public class average_of_level_in_binary_tree {
     }
 
     private static class Solution {
-        public List<Double> averageOfLevels(common.TreeNode root) {
+        public List<Double> averageOfLevels(TreeNode root) {
             return new AbstractList<>() {
                 List<Double> temp = null;
 
@@ -30,7 +30,7 @@ public class average_of_level_in_binary_tree {
             };
         }
 
-        private List<Double> helper(common.TreeNode root) {
+        private List<Double> helper(TreeNode root) {
             List<Double> res = new ArrayList<>();
             Queue<TreeNode> q = new LinkedList<>();
             q.add(root);

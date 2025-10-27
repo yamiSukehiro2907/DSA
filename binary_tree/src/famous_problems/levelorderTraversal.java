@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+package famous_problems;
 import common.TreeNode;
-import java.util.Queue;
+import java.util.*;
 
-public class pathSum_in_binary_tree {
-
+public class levelorderTraversal {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(11);
         root.left = new TreeNode(6);
@@ -14,9 +11,9 @@ public class pathSum_in_binary_tree {
         root.right = new TreeNode(15);
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(21);
-        // root.left.right.left = new TreeNode(13);
-        // root.right.right.left = new TreeNode(18);
-        // root.right.right.left.left = new TreeNode(16);
+        root.left.right.left = new TreeNode(13);
+        root.right.right.left = new TreeNode(18);
+        root.right.right.left.left = new TreeNode(16);
         List<List<Integer>> ans = new ArrayList<>();
         getTree(ans, root);
         for (List<Integer> list : ans) {
@@ -25,40 +22,18 @@ public class pathSum_in_binary_tree {
             }
             System.out.println();
         }
-        System.out.println(hasPathSum(root, 36));
-    }
-
-    public static boolean hasPathSum(TreeNode root, int targetSum) {
-        if (root == null) {
-            return false;
-        }
-        return solve(root, 0, targetSum);
-    }
-
-    private static boolean solve(TreeNode root, int sum, int target) {
-        if (root == null) {
-            return sum == target;
-        }
-        sum += root.val;
-        System.out.print(sum + " ");
-        if (root.left == null && root.right == null) {
-            return sum == target;
-        }
-        return solve(root.left, sum, target) || solve(root.right, sum, target);
     }
 
     private static void getTree(List<List<Integer>> ans, TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
-        if (root == null) {
+        if (root == null)
             return;
-        }
         queue.add(root);
         while (!queue.isEmpty()) {
             int nodes = queue.size();
             List<Integer> temp = new ArrayList<>();
             for (int i = 0; i < nodes; i++) {
                 TreeNode node = queue.poll();
-                if(node == null) continue;
                 temp.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);

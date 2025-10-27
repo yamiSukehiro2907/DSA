@@ -1,3 +1,4 @@
+package famous_problems;
 import common.TreeNode;
 public class is_mirror {
 

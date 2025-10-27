@@ -1,11 +1,11 @@
+package famous_problems;
 import common.TreeNode;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class verticalViewBT {
+public class vertical_view_binary_tree_without_conditions {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(11);
         root.left = new TreeNode(6);

@@ -1,8 +1,11 @@
 package binary_search_tree;
-import common.TreeNode;
+
 import java.util.*;
 
+import common.TreeNode;
+
 public class mode_in_binary_search_tree {
+
     public static void main(String[] args) {
 
     }
@@ -19,13 +22,15 @@ public class mode_in_binary_search_tree {
     private static Integer prev = null;
 
     private static void solve(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         solve(root.left);
-        if (prev != null && prev == root.val)
-            curr_freq++;
-        else
+        if (prev != null && prev == root.val) {
+            curr_freq++; 
+        }else {
             curr_freq = 1;
+        }
         if (curr_freq > max_freq) {
             max_freq = curr_freq;
             list.clear();
