@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class count_elements_of_diff_k {
     public static void main(String[] args) {
         int arr[] = { 8, 12, 16, 4, 0, 20 };
         int B = 4;

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Set {
+public class hashset {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int arr[] = { 1, 2, 7, 9, 1, 2 };
