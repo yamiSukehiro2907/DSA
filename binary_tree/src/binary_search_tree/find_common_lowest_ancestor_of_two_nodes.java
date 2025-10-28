@@ -2,7 +2,17 @@ package binary_search_tree;
 import common.TreeNode;
 public class find_common_lowest_ancestor_of_two_nodes {
     public static void main(String[] args) {
-
+        TreeNode root = new TreeNode(11);
+        root.left = new TreeNode(7);
+        root.left.left = new TreeNode(6);
+        root.left.right = new TreeNode(9);
+        root.left.left.left = new TreeNode(2);
+        root.right = new TreeNode(16);
+        root.right.left = new TreeNode(13);
+        root.right.left.right = new TreeNode(15);
+        root.right.right = new TreeNode(18);
+        root.right.right.right = new TreeNode(21);
+        
     }
 
     private static TreeNode commonLCA(TreeNode root, TreeNode node1, TreeNode node2) {
