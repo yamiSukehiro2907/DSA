@@ -1,0 +1,196 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Improved margins for better spacing
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Increased word spacing
+\spaceskip=0.4em plus 0.2em minus 0.1em
+\xspaceskip=0.6em plus 0.3em minus 0.2em
+
+% Better line spacing
+\linespread{1.1}
+
+\titleformat{\section}{
+  \vspace{-2pt}\centering
+}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength{\itemsep}{2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE Vimal Kumar Yadav} \\ \vspace{4pt}
+    \small
+    \faIcon{map-marker-alt} Bengaluru, Karnataka \quad
+    \faIcon{phone} +91 8604732097 \quad
+    \href{mailto:vimalyadavkr001@gmail.com}{\faIcon{envelope} vimalyadavkr001@gmail.com}
+    
+    \vspace{3pt}
+    
+    \href{https://github.com/yamiSukehiro2907}{\faIcon{github} GitHub} \quad
+    \href{https://linkedin.com/in/vimal-kumar-yadav-58a7a5316}{\faIcon{linkedin} LinkedIn} \quad
+    \href{https://www.geeksforgeeks.org/user/vimalyad2907/}{\faIcon{code} GeeksforGeeks} \quad
+\end{center}
+
+\vspace{2pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Backend engineer with deep expertise in building production-ready systems using Spring Boot and MERN stack. Proven ability to architect complex real-time applications with stateful logic, authentication middleware, and scalable cloud deployments. Known for rapid adaptability—learning new technologies and writing production-grade code that evolves into successful applications. Currently expanding expertise in cloud hosting optimization and infrastructure design. Strong foundation in API development, and delivering robust solutions for high-stakes environments.}
+
+%-----------EDUCATION-----------
+\vspace{2pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Scaler School of Technology}{Jun. 2028}
+      {Bachelor of Technology, Computer Science and Engineering (GPA: 9.17/10)}{Bangalore, Karnataka}
+      \resumeItemListStart
+        \resumeItem{Coursework: Data Structures, Algorithms, Database Management, Operating Systems, MERN Stack, Computer Networks, Object-Oriented Programming}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {MPVM Ganga Gurukulam}{May 2022}
+      {12th Grade (85.40\%)}{Prayagraj, Uttar Pradesh}
+      \resumeItemListStart
+        \resumeItem{Coursework: Physics, Chemistry, Mathematics, Computer Science}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Backend Engineer}{Apr. 2025 -- Sept. 2025}
+      {Bricks Education}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained backend systems using Spring Boot, Java, and Maven, while adhering to Software Development Life Cycle principles and ensuring production-level code quality}
+        \resumeItem{Collaborated with frontend development team using React Native to make key architecture design decisions, following Agile practices and Object-Oriented Programming principles for scalable system design}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freelance Shopify Developer}{Feb. 2025 -- Mar. 2025}
+      {Private Client}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed and deployed a custom Shopify store with responsive layouts and integrated payment gateway, demonstrating thorough understanding of end-to-end development and deployment processes}
+        \resumeItem{Coded and modified core theme in Liquid language, demonstrating rapid adaptability to new technologies and quick implementation of client requirements}
+        \resumeItem{Implemented SEO best practices to enhance search engine visibility, aligning with client and project objectives}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Bricks Learning Management System}}{Nov. 2024 -- Apr. 2025}
+      \resumeItemListStart
+        \resumeItem{Architected and developed a production-ready LMS using Spring Boot, Java, and Maven, enabling efficient content management for schools and coaching centers with focus on scalability and performance}
+        \resumeItem{Implemented RESTful APIs with Spring Security for authentication and authorization, ensuring secure access control with JWT-based stateless authentication}
+        \resumeItem{Designed normalized MySQL database schema for storing course content, user data, and progress tracking, optimizing for query performance and data integrity}
+        \resumeItem{Coordinated with frontend team using React Native for seamless cross-platform mobile experience, making critical architecture decisions}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Studi.io | Real-Time Collaborative Platform} $|$ \href{https://studiio.netlify.app/}{\faIcon{link} Live Demo}}{Aug. 2025 -- Oct. 2025}
+      \resumeItemListStart
+        \resumeItem{Architected a complex, real-time MERN application using Socket.IO with JWT-based socket authentication middleware, room-based event broadcasting (io.to), and stateful logic to manage concurrent users for live chat and a Fabric.js interactive whiteboard}
+        \resumeItem{Deployed the end-to-end, decoupled application to a production cloud stack: a stateful Node.js/Socket.IO server (Render), a static React/Vite frontend (Netlify), and a MongoDB Atlas database, solving all cross-origin (CORS) and httpOnly cookie authentication challenges}
+        \resumeItem{Engineered a robust session management system using Redux Toolkit with redux-persist and an app-load re-validation flow; supported by a RESTful API with advanced Mongoose features (aggregation, subdocument manipulation) and Cloudinary/Sendgrid integration}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{devStreak | Open-Source Cross-Platform Activity Tracker}}{May. 2025 -- Jun. 2025}
+      \resumeItemListStart
+        \resumeItem{Architected complete tech stack from scratch (Java/SpringBoot backend, React/Tailwind frontend, PostgreSQL database, API integrations) to solve personal streak-loss problem, with clean modular design enabling easy community contributions}
+        \resumeItem{Implemented plugin-based architecture where each platform integration is independent with standardized interfaces, allowing contributors to add platforms without understanding entire codebase—demonstrating scalable system design thinking}
+        \resumeItem{Created comprehensive developer documentation including setup guides, API patterns, and contribution workflows to lower barrier for open-source participation, showcasing full-stack ownership from infrastructure to developer experience}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Java , JavaScript, TypeScript(Core) , Python} \\[3pt]
+     \textbf{Backend Development}{: Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Node.js, Express.js} \\[3pt]
+     \textbf{Frontend Development}{: React, React Router, Next.js, HTML, CSS, Tailwind CSS, Bootstrap} \\[3pt]
+     \textbf{Database Management}{: MySQL (Advanced), MongoDB, PostgreSQL} \\[3pt]
+     \textbf{Web Development \& APIs}{: RESTful APIs, WebSocket, JWT Authentication, SOAP APIs, Socket.IO} \\[3pt]
+     \textbf{Development Tools \& Libraries}{: Maven, Git, Postman, OAuth2, Redux Toolkit, Mongoose} \\[3pt]
+     \textbf{Cloud \& DevOps}{: Render, Netlify, MongoDB Atlas, Cloud GCP, CORS Configuration} \\[3pt]
+     \textbf{Software Engineering Concepts}{: OOPs, Data Structures \& Algorithms, DBMS, Operating Systems, Software Development Life Cycle}
+    }}
+ \end{itemize}
+
+\end{document}
