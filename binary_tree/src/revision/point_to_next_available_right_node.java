@@ -1,5 +1,4 @@
 package revision;
-
 public class point_to_next_available_right_node {
 
     public static void main(String[] args) {

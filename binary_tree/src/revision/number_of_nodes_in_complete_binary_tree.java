@@ -1,9 +1,8 @@
 package revision;
 
+import common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
-
-import common.TreeNode;
 
 public class number_of_nodes_in_complete_binary_tree {
 
@@ -11,13 +10,13 @@ public class number_of_nodes_in_complete_binary_tree {
         TreeNode node = new TreeNode(11);
         node.left = new TreeNode(6);
         node.left.left = new TreeNode(2);
+        node.left.left.left = new TreeNode(1);
         node.left.right = new TreeNode(9);
-        node.left.right.left = new TreeNode(8);
         node.right = new TreeNode(15);
         node.right.left = new TreeNode(12);
         node.right.right = new TreeNode(21);
         node.right.right.left = new TreeNode(18);
-        node.right.right.left.left = new TreeNode(16);
+        node.print();
         System.out.println(find(node));
     }
 
@@ -27,6 +26,7 @@ public class number_of_nodes_in_complete_binary_tree {
         }
         nodeCount = 0;
         solve(root);
+        return nodeCount;
     }
     private static int nodeCount;
 
@@ -80,12 +80,12 @@ public class number_of_nodes_in_complete_binary_tree {
             return ans;
         }
 
-        private boolean dfs(boolean[] terminalNodes, int src, List<List<Integer>> list) {
+        private boolean bfs(boolean[] terminalNodes, int src, List<List<Integer>> list) {
             for (int neighbor : list.get(src)) {
                 if (!terminalNodes[neighbor]) {
-                    if (dfs(terminalNodes, neighbor, list)) {
-                        terminalNodes[neighbor] = true; 
-                    }else {
+                    if (bfs(terminalNodes, neighbor, list)) {
+                        terminalNodes[neighbor] = true;
+                    } else {
                         return false;
                     }
                 }
