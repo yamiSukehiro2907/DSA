@@ -19,6 +19,7 @@ DSA/
 ├── queue                  # Queue and deque implementations
 ├── recursion              # Recursion-based problems
 ├── stack                  # Stack data-structure & problems
+├── tries                  # Tries data-structure & problems
 ├── .idea                  # IDE configuration files (local development)
 └── README.md              # ← You are here
 ````
