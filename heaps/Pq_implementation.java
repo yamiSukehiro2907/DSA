@@ -58,17 +58,36 @@ public class Pq_implementation {
 
         private void fixDown(int index) {
             int leftChildIndex = 2 * index + 1, rightChildIndex = 2 * index + 2;
-            int parent = list.get(index);
-            if (leftChildIndex < list.size() && parent > list.get(leftChildIndex)) {
-                int temp = parent;
-                list.set(index, list.get(leftChildIndex));
-                list.set(leftChildIndex, temp);
-                fixDown(leftChildIndex);
-            } else if (rightChildIndex < list.size() && parent > list.get(rightChildIndex)) {
-                int temp = parent;
-                list.set(index, list.get(rightChildIndex));
-                list.set(rightChildIndex, temp);
-                fixDown(rightChildIndex);
+            int parentElement = list.get(index);
+            if (leftChildIndex < list.size() && rightChildIndex < list.size()) {
+                int leftChild = list.get(leftChildIndex);
+                int rightChild = list.get(rightChildIndex);
+                if (parentElement > leftChild && parentElement > rightChild) {
+                    if (leftChild < rightChild) {
+                        list.set(index, leftChild);
+                        list.set(leftChildIndex, parentElement);
+                        fixDown(leftChildIndex);
+                    } else {
+                        list.set(index, rightChild);
+                        list.set(rightChildIndex, parentElement);
+                        fixDown(rightChildIndex);
+                    }
+                } else if (parentElement > leftChild) {
+                    list.set(index, leftChild);
+                    list.set(leftChildIndex, parentElement);
+                    fixDown(leftChildIndex);
+                } else if (parentElement > rightChild) {
+                    list.set(index, leftChild);
+                    list.set(leftChildIndex, parentElement);
+                    fixDown(leftChildIndex);
+                }
+            } else if (leftChildIndex < list.size()) {
+                int leftChild = list.get(leftChildIndex);
+                if (parentElement > leftChild) {
+                    list.set(index, leftChild);
+                    list.set(leftChildIndex, parentElement);
+                    fixDown(leftChildIndex);
+                }
             }
         }
 
