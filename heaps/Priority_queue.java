@@ -16,7 +16,7 @@ public class Priority_queue {
         this.arr = new int[temp.length * 2];
         System.arraycopy(temp, 0, this.arr, 0, temp.length);
         this.index = temp.length;
-        for (int i = (temp.length - 1) / 2; i >= 0; i--) {
+        for (int i = temp.length / 2 - 1; i >= 0; i--) {
             heapifyDown(i);
         }
     }
