@@ -129,5 +129,3 @@ or connect directly via GitHub discussions.
 ### 🌟 If you found this helpful, don’t forget to star the repo!
 
 Happy Coding and Keep Learning! 🚀
-
-```
